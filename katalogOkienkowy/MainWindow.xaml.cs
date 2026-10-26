@@ -19,6 +19,26 @@ namespace katalogOkienkowy
         public MainWindow()
         {
             InitializeComponent();
+
+            //stwórz listę kilku produktów
+
+
+            List<Product> listaProduktow = new List<Product>
+            {
+              new Product("Chleb", 2.50, "Pieczywo" , 5 , 1),
+              new Product("Ser", 10, "Nabiał" , 14 , 1),
+              new Product("Kiełbasa", 6, "wędliny" , 9 , 1),
+              new Product("Herbata Lipton", 11.99 , "Napoje" , 20 , 1),
+              new Product("babka", 7, "Pieczywo" , 10 , 1),
+              new Product("kajzerka", 0.99, "Pieczywo" , 67 , 1),
+              new Product("Ciastka", 19.99, "Pieczywo" , 10 , 1),
+
+            };
+
+            EtykietaLiczbaProduktow.Text = $"Liczba produktów: {listaProduktow.Count}";
+            EtykietaWartoscProduktow.Text = $"Wartosc magazynu: {Product.ObliczWartoscMagazynu(listaProduktow)}";
+
+
         }
     }
 }
