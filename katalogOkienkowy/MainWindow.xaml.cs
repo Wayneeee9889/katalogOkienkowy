@@ -36,9 +36,12 @@ namespace katalogOkienkowy
             };
 
             EtykietaLiczbaProduktow.Text = $"Liczba produktów: {listaProduktow.Count}";
-            EtykietaWartoscProduktow.Text = $"Wartosc magazynu: {Product.ObliczWartoscMagazynu(listaProduktow)}";
+            EtykietaWartoscProduktow.Text = $"Wartosc magazynu: {Product.ObliczWartoscMagazynu(listaProduktow):C}";
 
-
+            TextBlock dopisek = new TextBlock();
+            dopisek.Text = "to zostanie dodane";
+            dopisek.FontSize = 14;
+            GlownyStackPanel.Children.Add(dopisek);
         }
     }
 }
